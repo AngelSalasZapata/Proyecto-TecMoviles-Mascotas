@@ -1,5 +1,5 @@
 # Proyecto-TecMoviles-Mascotas
-repositorio para el proyecto de testing sección B - integrantes: nontoya renzo, pozu luis, quispe yhosfer, salas angel
+repositorio para el proyecto de testing sección B - integrantes: montoya renzo, pozu luis, quispe yhosfer, salas angel
 
 estructura del proyecto:
 
