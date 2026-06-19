@@ -3,57 +3,72 @@ repositorio para el proyecto de testing sección B - integrantes: montoya renzo,
 
 estructura del proyecto:
 
-huella_solidaria/
-├── lib/
-│   ├── main.dart
-│   │
-│   ├── core/
-│   │   ├── theme/
-│   │   │   └── app_theme.dart              # Colores, tipografías, ThemeData
-│   │   ├── constants/
-│   │   │   └── app_constants.dart          # Strings, rutas, valores fijos
-│   │   └── utils/
-│   │       └── validators.dart             # Validaciones de formularios
-│   │
-│   ├── models/
-│   │   ├── albergue.dart                   # id, nombre, ubicación, contacto
-│   │   ├── mascota.dart                    # id, nombre, especie, edad, estado
-│   │   ├── donacion.dart                   # id, tipo, monto, albergueId
-│   │   └── usuario.dart                    # id, nombre, rol (adoptante/voluntario)
-│   │
-│   ├── services/
-│   │   ├── albergue_service.dart           # CRUD de albergues
-│   │   ├── mascota_service.dart            # CRUD de mascotas
-│   │   ├── donacion_service.dart           # Registro de donaciones
-│   │   └── auth_service.dart              # Login / registro de usuario
-│   │
-│   ├── providers/                          # Estado global (Provider / Riverpod)
-│   │   ├── albergue_provider.dart
-│   │   ├── mascota_provider.dart
-│   │   └── auth_provider.dart
-│   │
-│   ├── pages/
-│   │   ├── inicio/
-│   │   │   └── inicio_page.dart            # Home con tarjetas y nav bar
-│   │   ├── albergues/
-│   │   │   ├── albergues_page.dart         # Listado de albergues
-│   │   │   └── albergue_detalle_page.dart  # Info + mascotas del albergue
-│   │   ├── adopcion/
-│   │   │   ├── adopcion_page.dart          # Galería de mascotas disponibles
-│   │   │   └── mascota_detalle_page.dart   # Perfil de la mascota
-│   │   ├── donacion/
-│   │   │   └── donacion_page.dart          # Formulario para donar
-│   │   └── auth/
-│   │       ├── login_page.dart
-│   │       └── registro_page.dart
-│   │
-│   └── widgets/
-│       ├── mascota_card.dart               # Tarjeta reutilizable de mascota
-│       ├── albergue_card.dart              # Tarjeta reutilizable de albergue
-│       └── bottom_nav_bar.dart             # Barra de navegación compartida
-│
-├── assets/
-│   ├── images/                             # Imágenes e íconos locales
-│   └── fonts/                             # Tipografías personalizadas
-│
-└── pubspec.yaml
+app/
+└── src/main/java/com/example/huellasolidaria/
+    │
+    ├── HuellaSolidariaApp.kt          // Application class (opcional, para Hilt/DI)
+    │
+    ├── data/
+    │   ├── model/
+    │   │   ├── Mascota.kt             // data class: id, nombre, especie, edad, albergue, fotoUrl
+    │   │   ├── Albergue.kt            // data class: id, nombre, direccion, telefono
+    │   │   └── Donacion.kt            // data class: id, monto, tipo, albergueId
+    │   │
+    │   ├── repository/
+    │   │   ├── MascotaRepository.kt
+    │   │   ├── AlbergueRepository.kt
+    │   │   └── DonacionRepository.kt
+    │   │
+    │   └── remote/ (o local/)
+    │       ├── ApiService.kt          // Retrofit interface
+    │       └── AppDatabase.kt         // Room (si usas BD local)
+    │
+    ├── ui/
+    │   ├── inicio/
+    │   │   ├── InicioFragment.kt      // equivalente a tu InicioPage
+    │   │   ├── InicioViewModel.kt
+    │   │   └── InicioAdapter.kt       // para el RecyclerView de "Animales destacados"
+    │   │
+    │   ├── albergues/
+    │   │   ├── AlberguesFragment.kt
+    │   │   ├── AlberguesViewModel.kt
+    │   │   └── AlbergueAdapter.kt
+    │   │
+    │   ├── adoptar/
+    │   │   ├── AdoptarFragment.kt
+    │   │   ├── AdoptarViewModel.kt
+    │   │   ├── MascotaAdapter.kt
+    │   │   └── DetalleMascotaActivity.kt
+    │   │
+    │   └── donar/
+    │       ├── DonarFragment.kt
+    │       └── DonarViewModel.kt
+    │
+    ├── navigation/
+    │   └── MainActivity.kt            // contiene el BottomNavigationView + NavHostFragment
+    │
+    └── utils/
+        ├── Extensions.kt
+        └── Constants.kt
+
+app/src/main/res/
+    ├── layout/
+    │   ├── activity_main.xml          // Bottom navigation + contenedor
+    │   ├── fragment_inicio.xml
+    │   ├── item_mascota.xml           // tarjeta tipo "Luna", "Michi"
+    │   ├── item_albergue.xml
+    │   └── fragment_donar.xml
+    │
+    ├── navigation/
+    │   └── nav_graph.xml              // define las rutas entre fragments
+    │
+    ├── menu/
+    │   └── bottom_nav_menu.xml        // los 4 items: Inicio, Albergues, Adoptar, Donar
+    │
+    ├── drawable/
+    │   └── (iconos: ic_pets, ic_volunteer, ic_business...)
+    │
+    └── values/
+        ├── colors.xml                 // tu seedColor teal equivalente
+        ├── strings.xml
+        └── themes.xml
