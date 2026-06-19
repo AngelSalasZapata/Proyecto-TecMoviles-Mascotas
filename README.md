@@ -2,7 +2,7 @@
 repositorio para el proyecto de testing sección B - integrantes: montoya renzo, pozu luis, quispe yhosfer, salas angel
 
 estructura del proyecto:
-
+```bash
 app/
 └── src/main/java/com/example/huellasolidaria/
     │
@@ -72,3 +72,4 @@ app/src/main/res/
         ├── colors.xml                 // tu seedColor teal equivalente
         ├── strings.xml
         └── themes.xml
+```
