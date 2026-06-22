@@ -1,51 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/background">
 
-    <TextView
+    <!-- Header -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Adopta una mascota"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:background="@color/heroBackground"
+        android:padding="20dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="20dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adoptar_titulo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/heroText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Encuentra a tu nuevo mejor amigo"
+            android:textSize="13sp"
+            android:textColor="@color/heroText"
+            android:alpha="0.85" />
+    </LinearLayout>
+
+    <!-- Filter Chips -->
     <com.google.android.material.chip.ChipGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:chipSpacing="8dp"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipTodos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Todos"
+            android:text="@string/chip_todos"
+            android:textColor="@color/textPrimary"
+            app:chipBackgroundColor="@color/chipBackground"
+            app:chipStrokeColor="@color/outlineVariant"
+            app:chipStrokeWidth="1dp"
             android:checkable="true"
-            android:checked="true" />
+            android:checked="true"
+            app:chipIconVisible="false" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipPerros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perros"
-            android:checkable="true" />
+            android:text="@string/chip_perros"
+            android:textColor="@color/textPrimary"
+            app:chipBackgroundColor="@color/chipBackground"
+            app:chipStrokeColor="@color/outlineVariant"
+            app:chipStrokeWidth="1dp"
+            android:checkable="true"
+            app:chipIcon="@drawable/ic_dog_silhouette"
+            app:chipIconVisible="true"
+            app:chipIconSize="18dp" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipGatos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gatos"
-            android:checkable="true" />
+            android:text="@string/chip_gatos"
+            android:textColor="@color/textPrimary"
+            app:chipBackgroundColor="@color/chipBackground"
+            app:chipStrokeColor="@color/outlineVariant"
+            app:chipStrokeWidth="1dp"
+            android:checkable="true"
+            app:chipIcon="@drawable/ic_cat_silhouette"
+            app:chipIconVisible="true"
+            app:chipIconSize="18dp" />
 
     </com.google.android.material.chip.ChipGroup>
 
+    <!-- Separator -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/dividerColor" />
+
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="12dp" />
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
 
 </LinearLayout>

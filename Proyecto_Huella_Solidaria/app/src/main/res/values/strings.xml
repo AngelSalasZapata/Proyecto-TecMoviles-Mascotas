@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">Proyecto_Huella_Solidaria</string>
+    <string name="app_name">Huella Solidaria</string>
+    <string name="tagline">Ayuda a un albergue o adopta una mascota</string>
+    <string name="description">Conecta con albergues registrados, realiza donaciones y encuentra perros o gatos disponibles para adopción.</string>
+    <string name="donar_albergue">Donar a un albergue</string>
+    <string name="donar_desc">Apoya con alimento, medicina o dinero.</string>
+    <string name="adoptar_mascota">Adoptar una mascota</string>
+    <string name="adoptar_desc">Encuentra perros y gatos que buscan un hogar.</string>
+    <string name="animales_destacados">Animales destacados</string>
+    <string name="adoptar_titulo">Adopta una mascota</string>
+    <string name="chip_todos">Todos</string>
+    <string name="chip_perros">Perros</string>
+    <string name="chip_gatos">Gatos</string>
+    <string name="albergues_titulo">Albergues registrados</string>
+    <string name="donar_titulo">Realizar una donación</string>
+    <string name="monto_hint">Monto (S/)</string>
+    <string name="rb_dinero">Dinero</string>
+    <string name="rb_alimento">Alimento</string>
+    <string name="rb_medicina">Medicina</string>
+    <string name="btn_confirmar_donacion">Confirmar donación</string>
+    <string name="btn_ver">Ver</string>
+    <string name="btn_solicitar_adopcion">Solicitar adopción</string>
+    <string name="btn_volver">Volver</string>
+    <string name="mascotas_disponibles">mascotas disponibles</string>
+    <string name="hero_title">Huella Solidaria</string>
+    <string name="hero_subtitle">Juntos podemos hacer la diferencia</string>
+    <string name="stats_albergues">Albergues</string>
+    <string name="stats_mascotas">Mascotas</string>
+    <string name="stats_adopciones">Adopciones</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_albergues">Albergues</string>
+    <string name="nav_adoptar">Adoptar</string>
+    <string name="nav_donar">Donar</string>
 </resources>

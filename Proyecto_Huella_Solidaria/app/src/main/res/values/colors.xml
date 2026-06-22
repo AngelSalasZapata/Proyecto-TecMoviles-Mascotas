@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="primary">#FF6F00</color>
+    <color name="primaryDark">#E65100</color>
+    <color name="primaryLight">#FFB74D</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#FFE0B2</color>
+    <color name="onPrimaryContainer">#3E1A00</color>
+
+    <color name="secondary">#00897B</color>
+    <color name="secondaryDark">#00695C</color>
+    <color name="secondaryLight">#4DB6AC</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#B2DFDB</color>
+    <color name="onSecondaryContainer">#00201E</color>
+
+    <color name="tertiary">#E67A5E</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="tertiaryContainer">#FFDBCF</color>
+    <color name="onTertiaryContainer">#3A0E00</color>
+
+    <color name="error">#B3261E</color>
+    <color name="onError">#FFFFFF</color>
+    <color name="errorContainer">#F9DEDC</color>
+
+    <color name="background">#FFFBF5</color>
+    <color name="onBackground">#1C1B1F</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="onSurface">#1C1B1F</color>
+    <color name="surfaceVariant">#F5F0EB</color>
+    <color name="onSurfaceVariant">#49454F</color>
+    <color name="outline">#CAC4D0</color>
+    <color name="outlineVariant">#E5E0D7</color>
+
+    <color name="heroBackground">#FF6F00</color>
+    <color name="heroBackgroundGradientEnd">#E65100</color>
+    <color name="heroText">#FFFFFF</color>
+
+    <color name="chipBackground">#FFF0E0</color>
+    <color name="chipText">#E65100</color>
+    <color name="dividerColor">#E5E7EB</color>
+
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="cardStroke">#F0E8E0</color>
+    <color name="statsBackground">#FFF8F0</color>
+
+    <color name="textPrimary">#1C1B1F</color>
+    <color name="textSecondary">#6B7280</color>
+    <color name="textTertiary">#9CA3AF</color>
+
+    <color name="buttonDonate">#FF6F00</color>
+    <color name="buttonAdopt">#00897B</color>
+    <color name="buttonOutlineStroke">#FF6F00</color>
+
+    <color name="success">#2E7D32</color>
+    <color name="successContainer">#C8E6C9</color>
+    <color name="warning">#F9A825</color>
+    <color name="warningContainer">#FFF8E1</color>
+
+    <color name="transparent">#00000000</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="12dp"
+    style="@style/CardElevated"
+    app:cardBackgroundColor="@color/cardBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,17 +18,30 @@
         android:padding="12dp"
         android:gravity="center_vertical">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@android:drawable/ic_menu_gallery"
-            android:contentDescription="Foto de mascota" />
+        <!-- Pet Image Placeholder -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/primaryContainer">
 
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_paw"
+                android:contentDescription="Foto de mascota"
+                android:tint="@color/primary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pet Info -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="14dp"
             android:orientation="vertical">
 
             <TextView
@@ -30,20 +49,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/textPrimary" />
 
             <TextView
                 android:id="@+id/tvSubtitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:textColor="@color/textSecondary"
+                android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <Button
+        <!-- View Button -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ver" />
+            android:layout_height="36dp"
+            android:text="@string/btn_ver"
+            android:textSize="13sp"
+            app:cornerRadius="18dp"
+            app:backgroundTint="@color/buttonAdopt"
+            app:rippleColor="@color/onSecondary"
+            style="@style/Widget.Material3.Button" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
