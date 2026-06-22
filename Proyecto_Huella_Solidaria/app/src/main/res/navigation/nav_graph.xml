@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.huellasolidaria.ui.inicio.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio">
+
+        <action
+            android:id="@+id/action_inicio_to_donar"
+            app:destination="@id/donarFragment" />
+
+        <action
+            android:id="@+id/action_inicio_to_adoptar"
+            app:destination="@id/adoptarFragment" />
+
+        <action
+            android:id="@+id/action_inicio_to_detalleMascota"
+            app:destination="@id/detalleMascotaActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alberguesFragment"
+        android:name="com.example.huellasolidaria.ui.albergues.AlberguesFragment"
+        android:label="Albergues"
+        tools:layout="@layout/fragment_albergues" />
+
+    <fragment
+        android:id="@+id/adoptarFragment"
+        android:name="com.example.huellasolidaria.ui.adoptar.AdoptarFragment"
+        android:label="Adoptar"
+        tools:layout="@layout/fragment_adoptar">
+
+        <action
+            android:id="@+id/action_adoptar_to_detalleMascota"
+            app:destination="@id/detalleMascotaActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/donarFragment"
+        android:name="com.example.huellasolidaria.ui.donar.DonarFragment"
+        android:label="Donar"
+        tools:layout="@layout/fragment_donar" />
+
+    <activity
+        android:id="@+id/detalleMascotaActivity"
+        android:name="com.example.huellasolidaria.ui.adoptar.DetalleMascotaActivity"
+        android:label="Detalle de mascota" />
+
+</navigation>

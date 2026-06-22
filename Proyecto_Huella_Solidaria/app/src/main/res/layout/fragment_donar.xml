@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Realizar una donación"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Monto (S/)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rgTipoDonacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/rbDinero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dinero"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alimento" />
+
+            <RadioButton
+                android:id="@+id/rbMedicina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicina" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnConfirmarDonacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Confirmar donación" />
+
+    </LinearLayout>
+</ScrollView>

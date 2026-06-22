@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicioFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/alberguesFragment"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="Albergues" />
+
+    <item
+        android:id="@+id/adoptarFragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Adoptar" />
+
+    <item
+        android:id="@+id/donarFragment"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Donar" />
+
+</menu>
